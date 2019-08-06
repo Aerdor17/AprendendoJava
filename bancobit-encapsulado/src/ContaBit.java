@@ -1,5 +1,5 @@
 
-public class ContaBit { // 0.6 Construtores e membros estáticos, 02. utilizando construtores
+public class ContaBit { // JAVA PARTE 3, AULA 02
 	private double saldo;
 	private int agencia;
 	private int numero;
