@@ -4,20 +4,20 @@ public class ContaBit { // JAVA PARTE 3, AULA 02
 	private int agencia;
 	private int numero;
 	private ClienteBit titular;
-	private static int total; // MOSTRA O TOTAL DE CONTAS CRIADAS / static É PARA DIZER QUE O ATRIBUTO É DA CLASSE CONTABIT DISPENSANDO ASSIM O OBJETO DO LADO ESQUEDO NA INVOCAÇÃO DO METODO GET
+	private static int total; // MOSTRA O TOTAL DE CONTAS CRIADAS / static ï¿½ PARA DIZER QUE O ATRIBUTO ï¿½ DA CLASSE CONTABIT DISPENSANDO ASSIM O OBJETO DO LADO ESQUEDO NA INVOCAï¿½ï¿½O DO METODO GET
 
-	// ESSE CONSTRUTOR OBRIGA VOCÊ A PASSAR AGENCIA E NUMERO QUANDO VOCÊ DA NEW EM
+	// ESSE CONSTRUTOR OBRIGA VOCï¿½ A PASSAR AGENCIA E NUMERO QUANDO VOCï¿½ DA NEW EM
 	// UMA CONTA
 	public ContaBit(int agencia, int numero) { // CONSTRUTOR
 		total++; // OU CONTABIT.TOTAL
-		//System.out.println("o total de contas é " + total);
+		//System.out.println("o total de contas ï¿½ " + total);
 		
 		this.agencia = agencia;
 		this.numero = numero;
 		//System.out.println("estou criando uma nova conta " + this.numero);
 
 	}
-
+	// teste
 	public void deposita(double valor) {
 
 		this.saldo = this.saldo += valor;
@@ -42,7 +42,7 @@ public class ContaBit { // JAVA PARTE 3, AULA 02
 			destino.deposita(valor);
 			return true;
 		} else {
-			System.out.println("você não tem saldo suficiente");
+			System.out.println("vocï¿½ nï¿½o tem saldo suficiente");
 			return false;
 		}
 	}
@@ -57,7 +57,7 @@ public class ContaBit { // JAVA PARTE 3, AULA 02
 
 	public void setNumero(int numero) {
 		if (numero <= 0) {
-			System.out.println("numero não pode ser menor ou igual a zero");
+			System.out.println("numero nï¿½o pode ser menor ou igual a zero");
 			return;
 		}
 		this.numero = numero;
@@ -69,7 +69,7 @@ public class ContaBit { // JAVA PARTE 3, AULA 02
 
 	public void setAgencia(int agencia) {
 		if (agencia <= 0) {
-			System.out.println("não pode valor menor ou igual a zero");
+			System.out.println("nï¿½o pode valor menor ou igual a zero");
 			return;
 		}
 		this.agencia = agencia;
@@ -83,7 +83,7 @@ public class ContaBit { // JAVA PARTE 3, AULA 02
 		this.titular = titular;
 	}
 	
-	public static int getTotal() { //METODOS STATIC ACESSAM SÓ ATRIBUTOS STATIC DENTRO DA CLASSE, NÃO ACESSÃO ATRIBUTOS DE INSTANCIA
-		return ContaBit.total; //OU SÓ TOTAL
+	public static int getTotal() { //METODOS STATIC ACESSAM Sï¿½ ATRIBUTOS STATIC DENTRO DA CLASSE, Nï¿½O ACESSï¿½O ATRIBUTOS DE INSTANCIA
+		return ContaBit.total; //OU Sï¿½ TOTAL
 	}
 }

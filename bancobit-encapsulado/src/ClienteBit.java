@@ -4,6 +4,7 @@ public class ClienteBit {
 	private String nome;
 	private String cpf;
 	private String profissao;
+	
 
 	public String getNome() {
 		return nome;
