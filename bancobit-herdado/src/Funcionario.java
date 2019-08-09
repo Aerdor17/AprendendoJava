@@ -1,4 +1,4 @@
-// ONDE PAREI NO CURSO: AULA 02, 01 HERANÇA NO DIAGRAMA DE CLASSES
+// ONDE PAREI NO CURSO: AULA 03, 01 ENTENDENDO POLIMORFISMO
 
 public class Funcionario {
 
@@ -7,7 +7,7 @@ public class Funcionario {
 	private double salario;
 	
 	public double getBonificacao() {
-		return this.salario * 0.1;
+		return this.salario * 0.05;
 
 	}
 
