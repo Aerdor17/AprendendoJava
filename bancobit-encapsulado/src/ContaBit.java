@@ -4,20 +4,20 @@ public class ContaBit { // JAVA PARTE 3, AULA 02
 	private int agencia;
 	private int numero;
 	private ClienteBit titular;
-	private static int total; // MOSTRA O TOTAL DE CONTAS CRIADAS / static É PARA DIZER QUE O ATRIBUTO É DA CLASSE CONTABIT DISPENSANDO ASSIM O OBJETO DO LADO ESQUEDO NA INVOCAï¿½ï¿½O DO METODO GET
+	private static int total = 0; // MOSTRA O TOTAL DE CONTAS CRIADAS / static É PARA DIZER QUE O ATRIBUTO É DA CLASSE CONTABIT DISPENSANDO ASSIM O OBJETO DO LADO ESQUEDO NA INVOCAï¿½ï¿½O DO METODO GET
 
 	// ESSE CONSTRUTOR OBRIGA VOCÊ A PASSAR AGENCIA E NUMERO QUANDO VOCï¿½ DA NEW EM
 	// UMA CONTA
 	public ContaBit(int agencia, int numero) { // CONSTRUTOR
-		total++; // OU CONTABIT.TOTAL
-		//System.out.println("o total de contas É " + total);
-		
+		ContaBit.total++; // OU CONTABIT.TOTAL
+		System.out.println("o total de contas É " + total);
 		this.agencia = agencia;
 		this.numero = numero;
-		//System.out.println("estou criando uma nova conta " + this.numero);
+		this.saldo = 100;		
+		System.out.println("estou criando uma nova conta " + this.numero);
 
 	}
-	// teste
+	
 	public void deposita(double valor) {
 
 		this.saldo = this.saldo += valor;
@@ -42,7 +42,7 @@ public class ContaBit { // JAVA PARTE 3, AULA 02
 			destino.deposita(valor);
 			return true;
 		} else {
-			System.out.println("você não tem saldo suficiente");
+			System.out.println("você não n  tem saldo suficiente");
 			return false;
 		}
 	}
