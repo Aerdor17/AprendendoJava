@@ -17,6 +17,8 @@ public class TestaReferencia {
 		controle.registra(g1);
 		controle.registra(ev);
 		controle.registra(ux);
+		
+		System.out.println(controle.getSomabonifica());
 
 	}
 
