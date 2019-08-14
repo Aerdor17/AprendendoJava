@@ -1,5 +1,5 @@
 // GERETE EH UM FUNCIONÁRIO, OU O GERTENTE HERDA DA CLASS FUNCIONARIO SEUS ATRIBUTOS E FUNÇÕES 
-public class Gerente extends Funcionario { //EXTENDS FAZ UMA CLASSE HERADAR A OUTRA
+public class Gerente extends Funcionario { // EXTENDS FAZ UMA CLASSE HERADAR A OUTRA
 
 	private int senha;
 
@@ -17,7 +17,7 @@ public class Gerente extends Funcionario { //EXTENDS FAZ UMA CLASSE HERADAR A OU
 	}
 
 	public double getBonificacao() {
-		return super.getBonificacao() + super.getSalario();
-	}
+		return super.getSalario();
 
+	}
 }

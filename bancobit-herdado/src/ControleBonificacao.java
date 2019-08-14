@@ -9,7 +9,7 @@ public class ControleBonificacao {
 	}
 
 	public double getSomabonifica() {
-		return somabonifica;
+		return this.somabonifica;
 	}
 
 }
