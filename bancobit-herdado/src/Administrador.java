@@ -1,13 +1,30 @@
 
-public class Administrador extends Funcionario {
+public class Administrador extends Funcionario implements Autenticavel {
 
-	public static void main(String[] args) {
+	private int senha;
+	
+	@Override
+	public double getBonificacao() {
+
+		return 50;
+	}
+	
+	@Override
+	public void setSenha(int senha) {
+		this.senha = senha;
 
 	}
 
 	@Override
-	public double getBonificacao() {
-		return 50;
+	public boolean autentica(int senha) {
+		if (this.senha == senha) {
+			return true;
+		} else {
+			return false;
+		}
+
 	}
+
+	
 
 }

@@ -1,7 +1,7 @@
 //CONTRATO AUTENTICAVEL
     //QUEM ASSINAR ESSE CONTRATO PRECISA IMPLEMENTAR("implements")
             //METODO (setSenha)
-            //METODO (autentica)
+            //METODO (autenticavel)
 				//UMA INTERFACE É UMA CLASSE ABSTRATA COM TODOS OS METODOS ABSTRATOS
 public abstract interface Autenticavel { 
 

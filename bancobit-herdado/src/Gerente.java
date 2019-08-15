@@ -1,13 +1,28 @@
-// GERETE EH UM FUNCIONÁRIO, OU O GERTENTE HERDA DA CLASS FUNCIONARIO SEUS ATRIBUTOS E FUNÇÕES 
-public class Gerente extends Funcionario { // EXTENDS FAZ UMA CLASSE HERADAR A OUTRA
 
-	public static void main(String[] args) {
+public class Gerente extends Funcionario implements Autenticavel {
+	private int senha;
+
+	@Override
+	public double getBonificacao() {
+		return super.getSalario();		
+	}
+	
+	@Override
+	public void setSenha(int senha) {
+		this.senha = senha;
 
 	}
 
 	@Override
-	public double getBonificacao() {
-		return 100;
+	public boolean autentica(int senha) {
+		if (this.senha == senha) {
+			return true;
+		} else {
+			return false;
+		}
+
 	}
+
+	
 
 }
