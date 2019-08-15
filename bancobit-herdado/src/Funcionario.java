@@ -5,8 +5,9 @@ public abstract class Funcionario {
 	private String nome;
 	private String cpf;
 	private double salario;
-	
-	//METODO ABSTRATO ELE NÃO TEM UM CORPO // SE VOCÊ COLOCAR UM METODO ABSTRATO EM UMA CLASS MAE VOCE OBRIGA OS FILHOS A IMPLEMENTAREM ELE
+
+	// METODO ABSTRATO ELE NÃO TEM UM CORPO // SE VOCÊ COLOCAR UM METODO ABSTRATO EM
+	// UMA CLASS MAE VOCE OBRIGA OS FILHOS A IMPLEMENTAREM ELE
 	public abstract double getBonificacao();
 
 	public String getNome() {
