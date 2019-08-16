@@ -1,10 +1,10 @@
 
 public class Cliente implements Autenticavel {
 
-	private Autenticador autentica;
+	private AutenticadorUtil autentica;
 
 	public Cliente() {
-		this.autentica = new Autenticador();
+		this.autentica = new AutenticadorUtil();
 	}
 
 	public void setSenha(int senha) {

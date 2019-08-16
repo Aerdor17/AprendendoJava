@@ -1,6 +1,6 @@
 
 public class ContaPoupanca extends Conta {
-	
+
 	public ContaPoupanca(int agencia, int numero) {
 		super(agencia, numero);
 	}
@@ -8,7 +8,7 @@ public class ContaPoupanca extends Conta {
 	@Override
 	public void deposita(double valor) {
 		this.saldo += valor;
-		
+
 	}
 
 }

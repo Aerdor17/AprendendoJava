@@ -1,5 +1,5 @@
 
-public class ContaCorrente extends Conta {
+public class ContaCorrente extends Conta  {
 
 	public ContaCorrente(int agencia, int numero) { // E ASSIM QUE EU CHAMO UM CONSTRUTOR ESPECIFICO DA SUPERCLASS PARA
 													// A CLASS FILHA
@@ -15,7 +15,7 @@ public class ContaCorrente extends Conta {
 	@Override
 	public void deposita(double valor) {
 		this.saldo += valor;
-		
+
 	}
 
 }
