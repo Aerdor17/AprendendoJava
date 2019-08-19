@@ -3,8 +3,8 @@ public class Gerente extends Funcionario implements Autenticavel {
 	
 	private AutenticadorUtil autenticador;
 
-	public Gerente() { // CONSTRUTOR
-		this.autenticador = new AutenticadorUtil();
+	public Gerente() { // CONSTRUTOR É GERADO NAS CLASSES QUE PRECISAM IMPLEMENTAR UMA AUTENTICAÇÃO PARA INSTANCIAR UM OBJETO DO TIPO "AutenticadorUtil();"
+		this.autenticador = new AutenticadorUtil(); 
 	}
 
 	@Override

@@ -6,6 +6,8 @@ public abstract class Conta {
 	private int numero;
 	private Cliente titular;
 	private static int total = 0;
+	
+	// public abstract double getValorImposto();
 
 	public Conta(int agencia, int numero) {
 		Conta.total++;

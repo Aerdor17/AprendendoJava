@@ -9,7 +9,7 @@ public class Administrador extends Funcionario implements Autenticavel {
 		return 50;
 	}
 
-	public Administrador() { // CONSTRUTOR
+	public Administrador() { // CONSTRUTOR É GERADO NAS CLASSES QUE PRECISAM IMPLEMENTAR UMA AUTENTICAÇÃO PARA INSTANCIAR UM OBJETO DO TIPO "AutenticadorUtil();"
 		this.autenticador = new AutenticadorUtil();
 	}
 

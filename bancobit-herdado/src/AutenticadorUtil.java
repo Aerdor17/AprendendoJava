@@ -1,7 +1,6 @@
 
-public class AutenticadorUtil { // CLASSE DE COMPOSIÇÃO ELA RECEBE AS TAREFAZ DO "setSenha e autentica" das
-								// classes que precisam implementalas
-
+public class AutenticadorUtil { // CLASSE DE COMPOSIÇÃO ELA RECEBE AS TAREFAZ DOS OUTROS METODOS
+								// AGORA TODA A LÓGICA DE AUTENTICAÇÃO FICA EM UM LUGAR SÓfs
 	private int senha;
 
 	public void setSenha(int senha) {
