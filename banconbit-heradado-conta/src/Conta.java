@@ -6,7 +6,7 @@ public abstract class Conta {
 	private int numero;
 	private Cliente titular;
 	private static int total = 0;
-	
+
 	// public abstract double getValorImposto();
 
 	public Conta(int agencia, int numero) {
@@ -17,11 +17,10 @@ public abstract class Conta {
 		// this.saldo = 100;
 		// System.out.println("Estou criando uma conta " + this.numero);
 	}
-	
-	
-	
+
 	public abstract void deposita(double valor);
 
+//------------------------------------------------------------------------
 	public boolean saca(double valor) {
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
