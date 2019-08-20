@@ -5,7 +5,7 @@ public abstract class Conta {
 	private int agencia;
 	private int numero;
 	private Cliente titular;
-	private static int total = 0;
+	private static int total = 0; //teste
 
 	// public abstract double getValorImposto();
 
