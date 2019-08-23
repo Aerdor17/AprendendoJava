@@ -4,7 +4,7 @@ public class FluxoComError {
 		System.out.println("Ini do main");
 		try {// TRATAMENTO DE EXCEPTIONS
 			metodo1();
-		} catch (ArithmeticException | NullPointerException | MinhaExcecao ex) { // UM CATCH PARA DUAS EXCEPTIONS
+		} catch (ArithmeticException | NullPointerException ex) { // UM CATCH PARA DUAS EXCEPTIONS
 			String msg = ex.getMessage(); // PEGANDO A MENSAGEM DA EXCEPTION
 			System.out.println("Exception " + msg);
 			ex.printStackTrace(); // PEGANDO O RASTRO DA EXCEPTION
