@@ -7,7 +7,7 @@ public class FluxoComTratamento {
 			System.out.println("Fim do main");
 		} catch (ArithmeticException | NullPointerException ex) { // UM CATCH PARA DUAS EXCEPTIONS
 			String msg = ex.getMessage(); //PEGANDO A MENSAGEM DA EXCEPTION
-			System.out.println("ArithmeticException" + msg);
+			System.out.println("Exception" + msg);
 			ex.printStackTrace(); // PEGANDO O RASTRO DA EXCEPTION
 		}
 	}
@@ -23,7 +23,7 @@ public class FluxoComTratamento {
 		System.out.println("Ini do metodo2");
 		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
-			int a = i / 0;
+		//	int a = i / 0;
 			Conta c = null;
 			c.deposita();
 		}
