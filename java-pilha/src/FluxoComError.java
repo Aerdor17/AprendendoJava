@@ -1,4 +1,4 @@
-public class Fluxo {
+public class FluxoComError {
 
 	public static void main(String[] args) {
 		System.out.println("Ini do main");
@@ -12,22 +12,17 @@ public class Fluxo {
 		System.out.println("Fim do main");
 	}
 
-	private static void metodo1() throws MinhaExcecao {
+	private static void metodo1() {
 		System.out.println("Ini do metodo1");
 		metodo2();
 		System.out.println("Fim do metodo1");
 
 	}
 
-	private static void metodo2() throws MinhaExcecao {
-		System.out.println("Ini do metodo2");
-		// CRIO UM OBJETO COM NEW E DO LADO ESQUERDO EU FAÇO O "throw" JOGAR ELA COMO
-		// UMA BOMBA NO "metodo2();
-		throw new MinhaExcecao("deu errado");
-
-		// DEPOIS DA EXCEPTION O CODIGO NÃO PASSA MAIS A SER EXECUTADO
-		// POR ISSO FOI COMENTADO A LINHA: System.out.println("Fim do metodo2");
-
+	private static void metodo2() {// VAI CAUSAR UM StackOverflowError ESSE ERRO ACONTECE QUANDO A PILHA FICA SEM
+									// ESPAÇO
+		System.out.println("ini metodo 2 ");
+		metodo2();
 	}
 
 }
