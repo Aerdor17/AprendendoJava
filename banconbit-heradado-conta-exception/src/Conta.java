@@ -21,14 +21,14 @@ public abstract class Conta {
 	public abstract void deposita(double valor);
 
 //------------------------------------------------------------------------
-	public void saca(double valor) {
+	public void saca(double valor) throws SaldoInsuficienteException {
 		if (this.saldo < valor) {
-			// Problema
+			throw new SaldoInsuficienteException("Saldo" + this.saldo + "valro" + valor);
 		}
 		this.saldo -= valor;
 	}
 
-	public void transfere(double valor, Conta destino) { // POLIMORFISMO, RECEBE UMA CONTA EXPECIFICA DO TIPO "CC" OU
+	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException { // POLIMORFISMO, RECEBE UMA CONTA EXPECIFICA DO TIPO "CC" OU
 															// "CP" E FUNCIONA
 		this.saca(valor);
 		destino.deposita(valor);
