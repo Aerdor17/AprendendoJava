@@ -1,4 +1,6 @@
-
+package modelo;
+// FQN = full qualifield name
+//modelo.CalculadorImposto = FQN
 public class CalculadorImposto {
 
 	private double TotalImposto;
