@@ -1,4 +1,6 @@
-package modelo;
+package br.com.bytebank.banco.modelo;
+
+
 // FQN = Full qualifield name
 // modelo.CalculadorDeimposto = FQN
 public class CalculadorDeImposto {
