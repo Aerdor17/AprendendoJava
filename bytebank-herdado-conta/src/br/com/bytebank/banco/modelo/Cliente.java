@@ -1,5 +1,10 @@
 package br.com.bytebank.banco.modelo;
 
+/**
+ * representa a moldura de um cliente no bytebank
+ * @author leb_b
+ *
+ */
 public class Cliente {
 
     private String nome;
