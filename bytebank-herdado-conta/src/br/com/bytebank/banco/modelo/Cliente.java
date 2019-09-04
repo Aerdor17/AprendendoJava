@@ -3,6 +3,7 @@ package br.com.bytebank.banco.modelo;
 /**
  * representa a moldura de um cliente no bytebank
  * @author leb_b
+ * @version 0.1
  *
  */
 public class Cliente {

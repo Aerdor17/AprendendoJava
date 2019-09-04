@@ -19,6 +19,8 @@ public abstract class Conta {
 	 * Construtor para inicializar o objeto conta apartir da agencia e numero + um
 	 * contador que conta quantas contas foram criadas
 	 * 
+	 * @author leb_b
+	 * @version 0.1
 	 * @param agencia
 	 * @param numero
 	 */
@@ -32,12 +34,14 @@ public abstract class Conta {
 	}
 
 	public abstract void deposita(double valor);
-	
-	
+
 	/**
+	 * 
 	 * valor precisa ser maior do que o saldo
+	 * 
 	 * @param valor
 	 * @throws SaldoInsuficienteException
+	 * @author leb_b
 	 */
 	public void saca(double valor) throws SaldoInsuficienteException {
 		if (this.saldo < valor) {
