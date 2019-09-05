@@ -3,8 +3,11 @@ import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 import br.com.bytebank.banco.modelo.SaldoInsuficienteException;
 
-public class TesteContas {
 
+// br.com.bytebank.banco.test.TesteContas
+public class TesteContas {
+	
+	//java.lang.String EH O UNICO PACOTE QUE NÃO PRECISA SER IMPORTADO ELE É RESPONSAVEL PELAS CLASSES "String e System"
 	public static void main(String[] args) throws SaldoInsuficienteException {
 		
 						
