@@ -1,23 +1,29 @@
 package br.com.bytebank.banco.test;
 
+
 import br.com.bytebank.banco.modelo.ContaCorrente;
+import br.com.bytebank.banco.modelo.ContaPoupanca;
 
 public class TesteArraysReferencias {
 	
 	public static void main(String[] args) {
 		
 		//int[] idades = new idades[5];
-		ContaCorrente[] contas = new ContaCorrente[5]; //array
+		//Conta[] contas = new Conta[5]; //array
+		Object[] Referencias = new Object[5]; // array mais generico me possibilita guardar qualquer tipo de referencia
+		
+		
 		ContaCorrente cc1 = new ContaCorrente(11,22); // Conta Corrente
 		//acessando o array na posição 01
-		contas[0] = cc1;
+		Referencias[0] = cc1;
 		
-		ContaCorrente cc2 = new ContaCorrente(12, 33);
-		contas[1] = cc2;
+		ContaPoupanca cc2 = new ContaPoupanca(12, 33);
+		Referencias[1] = cc2;
 		
-		System.out.println(contas[1].getNumero());
-		
-		ContaCorrente ref = contas[1];
+//		Object refGenerica = contas[1];
+//		System.out.println(refGenerica.getNumero);
+
+		ContaPoupanca ref = (ContaPoupanca) Referencias[1]; // type cast
 		System.out.println(cc2.getNumero());
 		System.out.println(ref.getNumero());
 		
