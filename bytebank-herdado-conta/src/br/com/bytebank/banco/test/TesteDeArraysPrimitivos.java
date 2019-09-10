@@ -4,7 +4,7 @@ import br.com.bytebank.banco.modelo.Cliente;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteDeArraysPrimitivos {
 	
 	public static void main(String[] args) {
 //		// meu primeiro array
@@ -20,6 +20,7 @@ public class Teste {
 //		
 //		System.out.println(idades.length); // mostra o tamanho do array
 		
+	//Array dentro de um laço
 		for(int i = 0; i< idades.length; i++) {
 			idades [i] = i * i;
 			System.out.println(idades[i]);
