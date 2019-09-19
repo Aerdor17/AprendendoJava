@@ -9,35 +9,41 @@ import br.com.bytebank.banco.modelo.ContaPoupanca;
 public class Teste {
 
 	public static void main(String[] args) {
-		
+
 		ArrayList lista = new ArrayList();
-		
-		ContaCorrente cc1 = new ContaCorrente(11,22); 
+
+		ContaCorrente cc1 = new ContaCorrente(11, 22);
 		lista.add(cc1);
-		
+
 		ContaPoupanca cc2 = new ContaPoupanca(12, 33);
 		lista.add(cc2);
-		
-		System.out.println("tamanho"+ lista.size());
+
+		System.out.println("tamanho" + lista.size());
 		Conta ref = (Conta) lista.get(0);
 		System.out.println(ref.getNumero());
-		
+
 		lista.remove(0);
-		
-		System.out.println("Tamanho"+ lista.size());
-		
-		ContaCorrente cc3 = new ContaCorrente(11,22); 
+
+		System.out.println("Tamanho" + lista.size());
+
+		ContaCorrente cc3 = new ContaCorrente(11, 22);
 		lista.add(cc3);
-		
+
 		ContaPoupanca cc4 = new ContaPoupanca(12, 33);
 		lista.add(cc4);
-		
-		for(int i=0; i<lista.size();i++) {
+
+		for (int i = 0; i < lista.size(); i++) { // FOR DO JEITO ANTIGO
 			Object oRef = lista.get(i);
 			System.out.println();
-			
 		}
 		
+		System.out.println("------------");
+		
+		// for dando erro na lista
+//		for(Object oRef: lista) { // FOR NOVO 
+//			System.out.println(oRef);
+//		}
+
 	}
 
 }
