@@ -95,6 +95,20 @@ public abstract class Conta {
 	public static int getTotal() {
 		return Conta.total;
 	}
+	
+	@Override
+	public boolean equals(Object ref) {
+		// TRANFORMEI UMA REFERENCIA GENÉRICA ref EM UMA REFERENCIA ESPECIFICA outra DO TIPO CONTA
+		Conta outra = (Conta) ref;
+		
+		if(this.agencia != outra.agencia) {
+			return false;
+		}
+		if(this.numero != outra.numero) {
+			return false;
+		}
+		return true;
+	}
 
 	@Override
 	public String toString() {

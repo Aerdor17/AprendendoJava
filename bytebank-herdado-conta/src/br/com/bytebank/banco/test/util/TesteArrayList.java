@@ -6,11 +6,14 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteArrayList {
 
 	public static void main(String[] args) {
-
-		ArrayList lista = new ArrayList();
+		
+		//Generics
+		ArrayList <Conta> lista = new ArrayList <Conta>();
+		
+		ArrayList <String> nomes = new ArrayList <String>();
 
 		ContaCorrente cc1 = new ContaCorrente(11, 22);
 		lista.add(cc1);
@@ -20,7 +23,7 @@ public class Teste {
 
 		System.out.println("tamanho" + lista.size());
 
-		Conta ref = (Conta) lista.get(0);
+		Conta ref = lista.get(0);
 		System.out.println(ref.getNumero());
 
 		lista.remove(0);
@@ -39,9 +42,9 @@ public class Teste {
 
 		System.out.println("------------");
 				
-		// for dando erro na lista
-		for (Object o : lista) { // FOR NOVO
-			System.out.println(o);
+		
+		for (Conta contas : lista) { // FOR NOVO // EXPLICANDO O FOR NOVO, PARA CADA ELEMENTO OBJECT ENCIAM DA LISTA FAZ{ System.out.println(o)}
+			System.out.println(contas);
 		}
 
 	}
