@@ -1,24 +1,25 @@
 package br.com.bytebank.banco.test.util;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class TesteArrayList {
+public class TesteLinkedList {
 
 	public static void main(String[] args) {
 		
-		List<String> argumentos = Arrays.asList(args); // assim eu transoformo um array em uma lista
+		// LinkedList <Conta> lista = new LinkedList <Conta>(); //COLOCANDO <conta>
+		// DEPOIS do ARRAYLIS OU list OU linked list EU DIGO QUE A LISTA É SÓ DE CONTAS
+		//------------------------------------------------------------------------------
+	
+		List <Conta> lista = new ArrayList <Conta>();
 		
-		//Generics
-		ArrayList <Conta> lista = new ArrayList <Conta>();
 		
-		ArrayList <String> nomes = new ArrayList <String>();
-
 		ContaCorrente cc1 = new ContaCorrente(11, 22);
 		lista.add(cc1);
 

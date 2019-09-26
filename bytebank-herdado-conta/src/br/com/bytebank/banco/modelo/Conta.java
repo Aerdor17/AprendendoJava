@@ -96,7 +96,7 @@ public abstract class Conta {
 		return Conta.total;
 	}
 	
-	@Override
+	@Override // REESCREVENDO O METODO "equals"
 	public boolean equals(Object ref) {
 		// TRANFORMEI UMA REFERENCIA GENÉRICA ref EM UMA REFERENCIA ESPECIFICA outra DO TIPO CONTA
 		Conta outra = (Conta) ref;
