@@ -2,6 +2,7 @@ package br.com.bytebank.banco.test.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import br.com.bytebank.banco.modelo.Conta;
@@ -12,13 +13,15 @@ public class TesteArrayList {
 
 	public static void main(String[] args) {
 		
-		List<String> argumentos = Arrays.asList(args); // assim eu transoformo um array em uma lista
+		//List<String> argumentos = Arrays.asList(args); // assim eu transoformo um array em uma lista
+		//List<Conta> lista = new ArrayList<Conta>(); //usa array por baixo
+        //List<Conta> lista = new LinkedList<Conta>(); //lista linkada		
+		//List<Conta> lista = new Vector<Conta>(); //usa array por baixo, mas tbm é threadsafe
+		
 		
 		//Generics
-		ArrayList <Conta> lista = new ArrayList <Conta>();
+		List <Conta> lista = new ArrayList <Conta>();
 		
-		ArrayList <String> nomes = new ArrayList <String>();
-
 		ContaCorrente cc1 = new ContaCorrente(11, 22);
 		lista.add(cc1);
 
