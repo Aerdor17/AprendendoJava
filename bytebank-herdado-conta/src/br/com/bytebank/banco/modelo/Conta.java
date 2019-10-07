@@ -1,5 +1,7 @@
 package br.com.bytebank.banco.modelo;
 
+import java.util.Comparator;
+
 /**
  * Class representa a moldura de uma conta
  * 
@@ -95,16 +97,17 @@ public abstract class Conta {
 	public static int getTotal() {
 		return Conta.total;
 	}
-	
+
 	@Override // REESCREVENDO O METODO "equals"
 	public boolean equals(Object ref) {
-		// TRANFORMEI UMA REFERENCIA GENÉRICA ref EM UMA REFERENCIA ESPECIFICA outra DO TIPO CONTA
+		// TRANFORMEI UMA REFERENCIA GENÉRICA ref EM UMA REFERENCIA ESPECIFICA outra DO
+		// TIPO CONTA
 		Conta outra = (Conta) ref;
-		
-		if(this.agencia != outra.agencia) {
+
+		if (this.agencia != outra.agencia) {
 			return false;
 		}
-		if(this.numero != outra.numero) {
+		if (this.numero != outra.numero) {
 			return false;
 		}
 		return true;
