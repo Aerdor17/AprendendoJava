@@ -50,6 +50,7 @@ public class Teste {
 		// ordenador da lista
 		NumeroDaContaComparator comparator = new NumeroDaContaComparator(); // instancia da class comparadora
 																			// "NumeroDaContaComparator" e
+		// ordenador da lista pelo nome do titular e ordem alfabetica
 		TitularDaContaComparator titularComparator = new TitularDaContaComparator();
 		lista.sort(titularComparator); // passei para o metododo sort
 
@@ -79,8 +80,12 @@ class NumeroDaContaComparator implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta c1, Conta c2) {
-
-		if (c1.getNumero() < c2.getNumero()) {
+		
+		return Integer.compare(c1.getNumero(), c2.getNumero());
+		
+	//	return c1.getNumero() - c2.getNumero();
+		
+	/*	if (c1.getNumero() < c2.getNumero()) {
 			return -1;
 		}
 
@@ -88,7 +93,7 @@ class NumeroDaContaComparator implements Comparator<Conta> {
 			return 1;
 		}
 
-		return 0; // se for o mesmo numero retorna 0
-	}
+		return 0; // se for o mesmo numero retorna 0 */
+	} 
 
 }
