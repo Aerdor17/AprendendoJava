@@ -1,6 +1,7 @@
 package br.com.bytebank.banco.test.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -47,16 +48,19 @@ public class Teste {
 			System.out.println(conta);
 		}
 
-		// ordenador da lista
-		NumeroDaContaComparator comparator = new NumeroDaContaComparator(); // instancia da class comparadora
-																			// "NumeroDaContaComparator" e
+		// ORDENADOR DA LISTA
+		// Collections.sort(lista, new TitularDaContaComparator()); // forma de fazer o comparator antes do java 1.8
+		
+		// NumeroDaContaComparator comparator = new NumeroDaContaComparator(); //
+		// instancia da class comparadora // "NumeroDaContaComparator" e
 		// ordenador da lista pelo nome do titular e ordem alfabetica
-		TitularDaContaComparator titularComparator = new TitularDaContaComparator();
-		lista.sort(titularComparator); // passei para o metododo sort
+		
+		Collections.sort(lista);
+		lista.sort(new TitularDaContaComparator());		
 
 		System.out.println("---------------------");
 
-		for (Conta conta : lista) { // o for é para listar todas as contas da lista
+		for (Conta conta : lista) { // O "for"  É PARA PERCORER TODAS AS CONTAS DA LISTA.
 			System.out.println(conta + ", " + conta.getTitular().getNome());
 		}
 	}
@@ -67,7 +71,6 @@ class TitularDaContaComparator implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta c1, Conta c2) {
-
 		String nomeTitularC1 = c1.getTitular().getNome();
 		String nomeTitularC2 = c2.getTitular().getNome();
 		return nomeTitularC1.compareTo(nomeTitularC2); // compareTo compara o nomeTitularC1 com o C2 e organiza em ordem
@@ -79,13 +82,12 @@ class TitularDaContaComparator implements Comparator<Conta> {
 class NumeroDaContaComparator implements Comparator<Conta> {
 
 	@Override
-	public int compare(Conta c1, Conta c2) {
+	public int compare(Conta c1, Conta c2) {		
+		return Integer.compare(c1.getNumero(), c2.getNumero()); // retorna um primitivo  então posso chamar a class Integer pois cada primitivo possue um wrappa e usar  o compare da class Integer
 		
-		return Integer.compare(c1.getNumero(), c2.getNumero());
+	//	return c1.getNumero() - c2.getNumero(); // outras formas de fazer a mesma coisa 1°
 		
-	//	return c1.getNumero() - c2.getNumero();
-		
-	/*	if (c1.getNumero() < c2.getNumero()) {
+	/*	if (c1.getNumero() < c2.getNumero()) { // 2°
 			return -1;
 		}
 

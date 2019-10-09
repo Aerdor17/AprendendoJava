@@ -29,4 +29,10 @@ public class ContaCorrente extends Conta implements Tributavel {
 		return "numero: "+ super.toString();
 	}
 
+	@Override
+	public int compareTo(Conta o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

@@ -15,6 +15,12 @@ public class ContaEspecial extends Conta {
 		super.saldo += valor;
 		
 	}
+
+	@Override
+	public int compareTo(Conta o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 
 }

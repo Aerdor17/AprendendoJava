@@ -9,7 +9,7 @@ import java.util.Comparator;
  * 
  * 
  */
-public abstract class Conta {
+public abstract class Conta extends Object implements Comparable<Conta>{
 
 	protected double saldo;
 	private int agencia;
@@ -117,6 +117,13 @@ public abstract class Conta {
 	public String toString() {
 
 		return "Numero: " + this.numero + ", agencia: " + this.agencia;
+	}
+	
+	@Override
+	public int compareTo(Conta outra) {
+		
+		return Double.compare(this.saldo, outra.saldo) ; // saldo dessa conta this comparando com o saldo da outra conta essa conta com outra
+		
 	}
 
 }
