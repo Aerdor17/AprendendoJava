@@ -4,38 +4,36 @@ import java.util.ArrayList;
 
 import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
-import br.com.bytebank.banco.modelo.ContaPoupanca;
 
 public class TesteArrayListEquals {
 
-	public static void main(String[] args) {		
+	public static void main(String[] args) {
 		
-		/* ContaCorrente cc1 = new ContaCorrente(11, 22);
-		ContaCorrente cc2 = new ContaCorrente(11, 22);
+//		Conta cc1 = new ContaCorrente(22, 22);
+//		Conta cc2 = new ContaCorrente(22, 22);
+//		
+//		boolean igual = cc1.ehIgual(cc2);
+//		System.out.println(igual);
 		
-		boolean igual = cc1.ehIgual(cc2);
-		System.out.println("a conta é: "+ igual); */
-		
-		//GENERICS
-		ArrayList <Conta> lista = new ArrayList <Conta>();
-		
-		ArrayList <String> nomes = new ArrayList <String>();
 
-		ContaCorrente cc1 = new ContaCorrente(22, 11);
-		lista.add(cc1);
-
-		ContaPoupanca cc2 = new ContaPoupanca(22, 22);
-		lista.add(cc2);		
+		//Generics
+		ArrayList<Conta> lista = new ArrayList<Conta>();
 		
-		ContaCorrente cc3 = new ContaCorrente(22, 22);
+		Conta cc = new ContaCorrente(22, 11);
+		lista.add(cc);
 		
-		boolean exists = lista.contains(cc3);
-		System.out.println("Já existe: "+ exists);
+		Conta cc2 = new ContaCorrente(22, 22);
+		lista.add(cc2);
 		
-		for (Conta contas : lista) { 
-			System.out.println(contas);
-		} 
-
+		Conta cc3 = new ContaCorrente(22, 22);
+		boolean existe = lista.contains(cc3);
+		
+		System.out.println("JÃ¡ existe? " + existe);
+		
+		for(Conta conta : lista) {
+			System.out.println(conta);
+		}
+		
 	}
 
 }

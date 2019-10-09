@@ -8,26 +8,23 @@ public class TesteOutrosWrappers {
 	public static void main(String[] args) {
 		
 		
-		Integer idadeRef = Integer.valueOf(29); // autoboxing
+		Integer idadeRef = Integer.valueOf(29); //autoboxing
 		System.out.println(idadeRef.intValue()); // unboxing
 		
-		Double dRef = Double.valueOf(3.2);// autoboxing do double				
-		System.out.println(dRef.doubleValue());// unboxing do double
 		
-		Boolean bRef = Boolean.FALSE;// autoboxing de um boolean
-		System.out.println(bRef.booleanValue());// unboxing de um boolean
+		Double dRef = Double.valueOf(3.2); //autoboxing
+		System.out.println(dRef.doubleValue()); //unboxing
 		
-		// TODOS OS TIPOS PRIMITIVOS EXTENDS DA CLASS MÃE DELES A CLASS "Number" LOGO EU POSSO FAZER:
-		// referencia mais genérica "Number" para referenciar tipos mais expecificos
-		Number refNumeroInt = Integer.valueOf(29);
-		Number refNumeroDouble = Double.valueOf(3.2);
+		Boolean bRef = Boolean.FALSE;
+		System.out.println(bRef.booleanValue());
 		
-		List<Number> lista = new ArrayList(); // List do tipo "Number" que armazena todos os primitivos
+		Number refNumero = Float.valueOf(29.9f);
+		
+		List<Number> lista = new ArrayList<>();
 		lista.add(10);
-		lista.add(3.2);
+		lista.add(32.6);
 		lista.add(25.6f);
 		
-
 	}
 
 }

@@ -13,25 +13,25 @@ import br.com.bytebank.banco.modelo.ContaPoupanca;
 public class Teste {
 
 	public static void main(String[] args) {
-
+		
 		Conta cc1 = new ContaCorrente(22, 33);
 		Cliente clienteCC1 = new Cliente();
 		clienteCC1.setNome("Nico");
 		cc1.setTitular(clienteCC1);
 		cc1.deposita(333.0);
-
+		
 		Conta cc2 = new ContaPoupanca(22, 44);
 		Cliente clienteCC2 = new Cliente();
 		clienteCC2.setNome("Guilherme");
 		cc2.setTitular(clienteCC2);
 		cc2.deposita(444.0);
-
+		
 		Conta cc3 = new ContaCorrente(22, 11);
 		Cliente clienteCC3 = new Cliente();
 		clienteCC3.setNome("Paulo");
 		cc3.setTitular(clienteCC3);
 		cc3.deposita(111.0);
-
+		
 		Conta cc4 = new ContaPoupanca(22, 22);
 		Cliente clienteCC4 = new Cliente();
 		clienteCC4.setNome("Ana");
@@ -43,59 +43,53 @@ public class Teste {
 		lista.add(cc2);
 		lista.add(cc3);
 		lista.add(cc4);
-
+		
 		for (Conta conta : lista) {
 			System.out.println(conta);
 		}
-
-		// ORDENADOR DA LISTA
-		// Collections.sort(lista, new TitularDaContaComparator()); // forma de fazer o comparator antes do java 1.8
 		
-		// NumeroDaContaComparator comparator = new NumeroDaContaComparator(); //
-		// instancia da class comparadora // "NumeroDaContaComparator" e
-		// ordenador da lista pelo nome do titular e ordem alfabetica
+		//NumeroDaContaComparator comparator = new NumeroDaContaComparator();
+		lista.sort(null);
 		
-		Collections.sort(lista);
-		lista.sort(new TitularDaContaComparator());		
-
-		System.out.println("---------------------");
-
-		for (Conta conta : lista) { // O "for"  É PARA PERCORER TODAS AS CONTAS DA LISTA.
+		//Collections.sort(lista, new NumeroDaContaComparator());
+		//Collections.sort(lista);
+		//Collections.reverse(lista);
+		
+		System.out.println("---------");
+		
+		for (Conta conta : lista) {
 			System.out.println(conta + ", " + conta.getTitular().getNome());
 		}
 	}
-
 }
 
 class TitularDaContaComparator implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta c1, Conta c2) {
-		String nomeTitularC1 = c1.getTitular().getNome();
-		String nomeTitularC2 = c2.getTitular().getNome();
-		return nomeTitularC1.compareTo(nomeTitularC2); // compareTo compara o nomeTitularC1 com o C2 e organiza em ordem
-														// alfabética
+		String nomeC1 = c1.getTitular().getNome();
+		String nomeC2 = c2.getTitular().getNome();
+		return nomeC1.compareTo(nomeC2);
 	}
-
 }
 
 class NumeroDaContaComparator implements Comparator<Conta> {
 
 	@Override
-	public int compare(Conta c1, Conta c2) {		
-		return Integer.compare(c1.getNumero(), c2.getNumero()); // retorna um primitivo  então posso chamar a class Integer pois cada primitivo possue um wrappa e usar  o compare da class Integer
+	public int compare(Conta c1, Conta c2) {
+		return Integer.compare(c1.getNumero(), c2.getNumero());
 		
-	//	return c1.getNumero() - c2.getNumero(); // outras formas de fazer a mesma coisa 1°
+//		return c1.getNumero() - c2.getNumero();
 		
-	/*	if (c1.getNumero() < c2.getNumero()) { // 2°
-			return -1;
-		}
-
-		if (c1.getNumero() > c2.getNumero()) {
-			return 1;
-		}
-
-		return 0; // se for o mesmo numero retorna 0 */
-	} 
-
+//		if(c1.getNumero() < c2.getNumero()) {
+//			return -1;
+//		}
+//		if(c1.getNumero() > c2.getNumero()) {
+//			return 1;
+//		}
+//		return 0;
+	}
 }
+
+
+

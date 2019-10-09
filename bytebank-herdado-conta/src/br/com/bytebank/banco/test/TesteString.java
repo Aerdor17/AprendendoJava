@@ -4,33 +4,39 @@ public class TesteString {
 
 	public static void main(String[] args) {
 
-		String nome = "Alura"; // object literal
+		String vazio = "     Alura    ";
+		String outroVazio = vazio.trim();
 		
-	String vazio = "alu";
-//		String outroVazio = vazio.trim(); // faz com que o espassos não sejam considerados
-//		System.out.println(outroVazio.isEmpty()); // diz se o espaço esta vazio ou não
-//		System.out.println(vazio.contains("alu")); // verifica se alu esta dentro da string
+		System.out.println(vazio.contains("Alu"));
+		System.out.println(outroVazio);
 		
-//		for(int i=0;i <nome.length(); i++) {
-//		System.out.println(nome.charAt(i)); // pega o caracter na posição que o for passa 
-//		}
-				
-		//String outra = nome.toLowerCase(); // tudo letra minuscula
+		String nome = "Alura";//object literal
+		//String outro = new String("Alura");
 		
-		// String outro = new String ("alura"); // má pratica
-
-		// String outra = nome.replace("A", "a"); // muda o A para a
+		System.out.println(nome.length());
 		
-		// String outra = nome.toUpperCase(); //tudo letra maiuscula
-
-		// String outra = nome.replace(b, d); // troca uma letra pela outra
+		for(int i = 0; i < nome.length(); i++) {
+			System.out.println(nome.charAt(i));
+		}
 		
-		// char c = nome.charAt(0); // pega a letra que esta nessa posição
+//		String sub = nome.substring(1);
+//		System.out.println(sub);
 		
-		//String sub = nome.substring(1);
-		//System.out.println(sub); // cria uma substring apartir da string principal
+//		int pos = nome.indexOf("ur");
+//		System.out.println(pos);
 		
-		//System.out.println(outra);
-
+//		char c = nome.charAt(0);
+//		System.out.println(c);
+		
+//		char c = 'A'; 
+//		char d = 'a'; 	
+//		String outra = nome.replace(c, d);
+		
+		//String outra = nome.toUpperCase();
+		
+//		System.out.println(nome);
+//		System.out.println(outra);
+		
 	}
+
 }
