@@ -10,7 +10,7 @@ import br.com.bytebank.banco.modelo.Conta;
 import br.com.bytebank.banco.modelo.ContaCorrente;
 import br.com.bytebank.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteOrdenacao {
 
 	public static void main(String[] args) {
 		
@@ -63,7 +63,7 @@ public class Teste {
 	}
 }
 
-class TitularDaContaComparator2 implements Comparator<Conta> {
+class TitularDaContaComparator implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta c1, Conta c2) {
@@ -73,7 +73,7 @@ class TitularDaContaComparator2 implements Comparator<Conta> {
 	}
 }
 
-class NumeroDaContaComparator2 implements Comparator<Conta> {
+class NumeroDaContaComparator implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta c1, Conta c2) {
